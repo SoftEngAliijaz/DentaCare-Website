@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Header */
@@ -510,4 +510,101 @@ a {
   text-align: center;
   font-size: 20px;
   text-align: end;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #2e90fa;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.footer-left h2,
+.footer-right h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.footer-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #dceeff;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.footer-right .quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quote-form .form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.quote-form input,
+.quote-form textarea {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.quote-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.quote-form button {
+  background-color: #2e90fa;
+  color: black;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 150px;
+  align-self: flex-start;
+}
+
+.footer-right {
+  flex: 1 1 45%;
+  min-width: 300px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+::placeholder {
+  color: black;
 }
