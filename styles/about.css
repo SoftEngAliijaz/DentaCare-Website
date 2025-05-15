@@ -1,22 +1,17 @@
-/* About Section */
+/* About Section*/
 .about-card {
   display: flex;
-  flex-direction: row;
-  height: 100vh;
-  align-items: stretch;
-  height: auto;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.about-card-left,
-.about-card-right {
-  flex: 1;
-  max-width: 50%;
-  height: 100%;
+.about-card-left {
+  display: none;
 }
 
 .about-card-right {
-  height: auto;
-  padding: 20px;
+  width: 100%;
+  padding: 30px 20px;
   background-color: #2f89fc;
 }
 
@@ -25,18 +20,18 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  display: flex;
+  display: block;
 }
 
 .about-card-right h2 {
-  font-size: 32px;
+  font-size: clamp(28px, 3vw, 32px);
   font-weight: 600;
   color: #fff;
   margin-bottom: 20px;
 }
 
 .about-card-right p {
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 18px);
   margin-bottom: 30px;
   color: #fff;
   line-height: 1.6;
@@ -44,10 +39,12 @@
 
 .boxed-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   padding: 20px;
   border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
 }
 
 .check-icon {
@@ -59,15 +56,57 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .boxed-card h3 {
   margin: 0;
   color: #fff;
-  font-size: 22px;
+  font-size: clamp(18px, 2vw, 22px);
 }
 
 .boxed-card p {
   margin: 5px 0 0;
-  font-size: 16px;
+  font-size: clamp(14px, 1.8vw, 16px);
+  opacity: 0.9;
+}
+
+/* Tablet/Desktop styles */
+@media (min-width: 769px) {
+  .about-card {
+    flex-direction: row;
+  }
+
+  .about-card-left {
+    display: block;
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .about-card-right {
+    flex: 1;
+    max-width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .check-icon {
+    display: flex;
+  }
+}
+
+@media (min-width: 1441px) {
+  /* Large desktop */
+  .about-card-right {
+    padding: 60px;
+  }
+}
+
+/* Show Nothing on Less Than 320Px */
+@media (max-width: 319px) {
+  .about-card {
+    display: none;
+  }
 }
