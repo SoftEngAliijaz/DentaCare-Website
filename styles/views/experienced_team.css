@@ -1,0 +1,83 @@
+/* Experienced Team */
+.exp-team {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+}
+
+.exp-team.heading-text {
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #2f89fc;
+}
+
+.exp-team-header {
+    color: #2f89fc;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.team-card-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.exp-team-card {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    bordeR: 1px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    box-shadow: 5px 5px 5px 5px lightgray;
+
+}
+
+.team-img img {
+    height: 200px;
+    width: 200px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.team-person-title {
+    padding: 5px;
+    font-size: 22px;
+    font-weight: 400;
+    color: black;
+}
+
+.team-person-job-title {
+    padding: 5px;
+    color: #2f89fc;
+}
+
+.team-person-desc {
+    padding: 5px;
+    text-align: center;
+    color: gray;
+}
+
+.social-icons-ul {
+    list-style-type: none;
+    display: flex;
+    padding: 15px;
+    gap: 20px;
+    flex-direction: row;
+    grid-area: 50px;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #2f89fc;
+}
