@@ -44,9 +44,31 @@
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   font-size: 16px;
-  font-weight: bold;
 }
 
-::placeholder {
+input::placeholder {
   color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .newsletter-email-field {
+    width: 150%;
+    border-radius: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  #subscribe-btn {
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
 }
