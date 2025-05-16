@@ -26,48 +26,76 @@ body {
   width: 100%;
   top: 0;
   background-color: white;
-  opacity: 0.5;
-  color: black;
+  z-index: 1000;
 }
 
 .logo {
   font-size: 24px;
   text-transform: uppercase;
   color: black;
+  z-index: 1001;
 }
 
 .highlight {
   font-weight: bold;
+  color: #2f89fc;
 }
 
+/* Desktop Navigation */
 .nav-menu {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 30px;
+  transition: transform 0.3s ease;
 }
 
 .nav-menu-anchor {
   text-decoration: none;
   color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu-anchor:hover {
+  color: #2f89fc;
 }
 
 .btn-outline {
-  border: 1px solid lightgrey;
-  padding: 10px 20px;
+  border: 2px solid #2f89fc;
+  padding: 8px 20px;
   border-radius: 100px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-outline:hover {
+  background: #2f89fc;
+  color: white;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger .fa {
+  font-size: 24px;
 }
 
 /* Banner */
 .banner {
-  background-image: url("https://preview.colorlib.com/theme/dentacare/images/bg_1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://preview.colorlib.com/theme/dentacare/images/bg_1.jpg")
+      center/cover no-repeat;
   padding: 200px 40px 40px;
-  padding-right: 50%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -75,46 +103,100 @@ body {
   min-height: 100vh;
 }
 
+.banner-content {
+  max-width: 600px;
+}
+
 .banner-title {
-  font-size: 50px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: bold;
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .banner-description {
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .btn-primary {
-  height: 50px;
-  width: 220px;
+  padding: 12px 30px;
   background: #2f89fc;
-  border: 1px solid #2f89fc;
+  border: 2px solid #2f89fc;
   border-radius: 100px;
   color: #fff;
-  font-size: 14px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 600px) {
-  .banner {
-    padding: 1rem;
-    text-align: center;
+.btn-primary:hover {
+  background: transparent;
+  color: white;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
-  }
-  .banner-title {
-    font-size: 30px;
+    gap: 30px;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
   }
 
-  .banner-description {
-    font-size: 15px;
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Keep logo aligned left */
+  .logo {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+
+  .banner {
+    padding: 150px 20px 40px;
+    text-align: center;
+    justify-content: center;
   }
 
   .banner-content {
     max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .header {
+    position: relative;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-menu {
+    width: 80%;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .banner-description {
+    font-size: 1rem;
   }
 }
