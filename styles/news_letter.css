@@ -46,7 +46,7 @@
   font-size: 16px;
 }
 
-input::placeholder {
+#news_letter-placeholder-styling::placeholder {
   color: white;
 }
 

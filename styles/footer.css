@@ -89,8 +89,8 @@ button {
   width: fit-content;
 }
 
-::placeholder {
-  color: #666;
+#placeholder-styling::placeholder {
+  color: black;
 }
 
 /* Mobile Styles */
