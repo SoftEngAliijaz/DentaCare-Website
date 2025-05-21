@@ -127,7 +127,7 @@
 @media (max-width: 480px) {
   .pricing-card-grid {
     grid-template-columns: 1fr;
-    max-width: 320px;
+    width: auto;
   }
 
   .pricing-title {
